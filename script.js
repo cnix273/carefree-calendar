@@ -41,7 +41,8 @@ $(document).ready(function() {
             "padding-right": "10px",
             "padding-top": "10px",
             "border-top": "1px solid black",
-            "border-right": "1px solid black"});
+            "border-right": "1px solid black"
+        });
         $("#" + i).append(col1);
 
         // Create and style text input column
@@ -59,11 +60,9 @@ $(document).ready(function() {
         if (hour == time) {
             col2.attr("style", "background-color: #ff2400");
         }
-
         if (hour < time) {
             col2.attr("style", "background-color: silver");
         }
-
         if (hour > time) {
             col2.attr("style", "background-color: #7cfc00");
         }
@@ -79,12 +78,10 @@ $(document).ready(function() {
             "background-color": "#0FB7C9"
         });
         $("#" + i).append(col3);
-
     }
 
-        // Add save icon to save button
-        $("button").append('<span class="fas fa-save"></span>');
-
+    // Add save icon to save button
+    $("button").append('<span class="fas fa-save"></span>');
 
     // Locally store text content when plan is submitted
     $("button").click(function(event) {
@@ -97,4 +94,3 @@ $(document).ready(function() {
         localStorage.setItem(plansId, plansText);
     });
 })
-
